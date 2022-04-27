@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+public class primero {
+    public static void main(String[] args)  {
+        
+        double NumeroUno;
+        double NumeroDos;
+        double Resultado;
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Ingrese el primer numero: ");
+        NumeroUno = scanner.nextDouble();
+        System.out.print("Ingrese el segundo numero: ");
+        NumeroDos = scanner.nextDouble();
+
+        Resultado = NumeroDos + NumeroUno;
+
+        System.out.print("El resultado es: " + Resultado);
+    }
+}
