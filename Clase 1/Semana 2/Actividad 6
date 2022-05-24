@@ -1,1 +1,52 @@
+import java.util.*;
 
+public class Actividad_6 {
+    public static void main(String args[]) {
+
+        int vector[] = new int[5];
+
+        Scanner Leer = new Scanner(System.in);
+
+        int i, p, f = 0, numero;
+        boolean bandera;
+
+        for (i = 0; i < vector.length; i++) {
+            System.out.print("Ingrese un numero: ");
+            numero = Leer.nextInt();
+
+            while (f != 4) {
+                if (vector[f] == numero) {
+                    System.out.println("Este numero " + numero + " ya lo puso.");
+                    i = i - 1;
+                }
+                
+                f++;
+
+                if (numero % 7 != 0) {
+                    vector[i] = numero;
+                } else {
+                    System.out.println("El numero " + numero + " no es valido porque es multiplo de 7.");
+                    i = i - 1;
+                }
+            }
+
+            do {
+                bandera = false;
+                for (p = 0; p <= 3; p++) {
+
+                    if (vector[p] > vector[p + 1]) {
+
+                        int auxiliar = vector[p];
+                        vector[p] = vector[p + 1];
+                        vector[p + 1] = auxiliar;
+                        bandera = true;
+                    }
+                }
+            } while (bandera);
+
+            for (i = 0; i < vector.length; i++) {
+                System.out.print(vector[i] + ", ");
+            }
+        }
+    }
+}
