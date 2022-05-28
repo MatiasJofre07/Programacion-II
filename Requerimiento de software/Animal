@@ -1,0 +1,67 @@
+import java.util.Scanner;
+
+public class Animal {
+    String nombre;
+    String raza;
+    int peso;
+
+    public Animal() {
+    }
+
+    public Animal(String nombreDelAnimal, String razaDelAnimal, int pesoDelAnimal) {
+        nombre = nombreDelAnimal;
+        raza = razaDelAnimal;
+        peso = pesoDelAnimal;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getNombre() {
+        return this.nombre;
+    }
+
+    public void setRaza(String raza) {
+        this.raza = raza;
+    }
+
+    public String getRaza() {
+        return this.raza;
+    }
+
+    public void setPeso(int peso) {
+        this.peso = peso;
+    }
+
+    public int getPeso() {
+        return this.peso;
+    }
+
+    public static void main(String[] args) {
+
+        Scanner Leer = new Scanner(System.in);
+
+        Animal animal1 = new Animal();
+
+        System.out.println("------------------------------------------------------------------------------");
+
+        System.out.print("Ingrese el nombre: ");
+        String nombre = Leer.nextLine();
+        animal1.setNombre(nombre);
+
+        System.out.print("Ingrese el raza: ");
+        String raza = Leer.nextLine();
+        animal1.setRaza(raza);
+
+        System.out.print("Ingrese el peso: ");
+        int peso = Leer.nextInt();
+        animal1.setPeso(peso);
+
+        System.out.println(
+                "El nombre del animal es " + animal1.nombre + " es de raza " + animal1.raza + " y pesa " + animal1.peso
+                        + "Kilos");
+
+        System.out.println("------------------------------------------------------------------------------");
+    }
+}
